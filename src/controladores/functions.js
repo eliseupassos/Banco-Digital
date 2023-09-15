@@ -5,23 +5,28 @@ const verificarBody = function (conta) {
     return true;
 };
 
-const verificarEmail_Cpf = function (bancodedados, conta) {
+const verificarEmail_Cpf = function (bancodedadosContas, conta) {
     let status = true
-    bancodedados.contas.every((verificar) => {
+    bancodedadosContas.every((verificar) => {
         return status = verificar.usuario.email !== conta.email;
     });
-    bancodedados.contas.every((verificar) => {
+    if (!status) {
+        return status
+    }
+    bancodedadosContas.every((verificar) => {
         return status = verificar.usuario.cpf !== conta.cpf;
     });
-    return status;
+    return status
 };
 
-
-
-
-
+const acharConta = function (bancodedados, numeroDaConta) {
+    return bancodedados.contas.find((acharConta) => {
+        return acharConta.numero === numeroDaConta;
+    });
+};
 
 module.exports = {
     verificarBody,
-    verificarEmail_Cpf
+    verificarEmail_Cpf,
+    acharConta
 }
