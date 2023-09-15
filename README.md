@@ -276,9 +276,7 @@ Body:
 **Exemplo de Resposta (em caso de sucesso, sem conteúdo no corpo):**
 
 ```json
-{
-    "mensagem": "Saque realizado com sucesso!"
-}
+{}
 
 ```
 
