@@ -153,12 +153,12 @@ const verificacaoCompletaDaConta = function (req, res, conta, bancodedados) {
     };
     if (verificarEmail_Cpf(bancodedados.contas, conta) === 1) {
         return res.status(401).json({
-            "mensagem": "Já existe uma conta com o e-mail informado!"
+            "mensagem": "O Email informado já existe cadastrado!"
         });
     };
     if (verificarEmail_Cpf(bancodedados.contas, conta) === 2) {
         return res.status(401).json({
-            "mensagem": "Já existe uma conta com o cpf informado!"
+            "mensagem": "O CPF informado já existe cadastrado!"
         });
     };
 
