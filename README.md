@@ -2,6 +2,9 @@
 
 Este é um projeto JavaScript que implementa um sistema bancário simples. Ele permite listar contas bancárias, criar novas contas, atualizar dados de usuários, excluir contas, depositar, sacar, transferências, consulta de saldo e extrato.
 
+**Imagem de teste do Projeto**
+![projeto_sistema_bancario](https://github.com/eliseupassos/Banco-Digital/blob/main/projeto_sistema_bancario.jpg)
+
 ## Pré-requisitos
 
 - [Node v9.6.7+](https://nodejs.org/en)
