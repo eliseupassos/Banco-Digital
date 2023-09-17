@@ -443,7 +443,7 @@ GET http://localhost:3000/contas/extrato?numero_conta=1&senha=1234
 
 ## **Coisas Pendentes**
 
-Há algumas funcionalidades pendentes que planejamos adicionar ao projeto:
+Há algumas funcionalidades pendentes que planejo adicionar ao projeto:
 
 - Verificar qual idade é permitida para criar uma conta e implementar um bloqueio com essa informação.
 - Examinar bibliotecas que possam ser integradas para aprimorar o sistema.
