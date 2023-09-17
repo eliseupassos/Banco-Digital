@@ -1,6 +1,6 @@
 # Projeto Bancário em JavaScript (Desenvolvido no Windows)
 
-Este é um projeto JavaScript que implementa um sistema bancário simples. Ele permite listar contas bancárias, criar novas contas, atualizar dados de usuários, excluir contas, depositar e sacar dinheiro. Além disso, há planos para adicionar recursos adicionais, como transferências, consulta de saldo e extrato.
+Este é um projeto JavaScript que implementa um sistema bancário simples. Ele permite listar contas bancárias, criar novas contas, atualizar dados de usuários, excluir contas, depositar, sacar, transferências, consulta de saldo e extrato.
 
 ## Pré-requisitos
 
