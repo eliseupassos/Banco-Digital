@@ -52,10 +52,8 @@ GET http://localhost:3000/contas?senha_banco=Cubos123Bank
 
 ```
 
-**Exemplo de Resposta:**
-
+**Exemplo de Resposta (em caso de sucesso):**
 ```json
-// 2 contas encontradas
 [
     {
         "numero": "1",
@@ -83,8 +81,9 @@ GET http://localhost:3000/contas?senha_banco=Cubos123Bank
     }
 ]
 
-// Nenhuma conta encontrada
-[]
+```
+**Exemplo de Resposta (em caso de erro):**
+```json
 {
     "mensagem": "A senha do banco informada é inválida!"
 }
@@ -365,7 +364,7 @@ GET http://localhost:3000/contas/saldo?numero_conta=1&senha=1234
 }
 ```
 
-**Exemplo de Resposta:**
+**Exemplo de Resposta (em caso de sucesso):**
 
 ```json
 {
@@ -393,7 +392,7 @@ GET http://localhost:3000/contas/extrato?numero_conta=1&senha=1234
 }
 ```
 
-**Exemplo de Resposta:**
+**Exemplo de Resposta (em caso de sucesso):**
 
 ```json
 
@@ -447,7 +446,7 @@ GET http://localhost:3000/contas/extrato?numero_conta=1&senha=1234
 Há algumas funcionalidades pendentes que planejamos adicionar ao projeto:
 
 - Verificar qual idade é permitida para criar uma conta e implementar um bloqueio com essa informação.
-- Analisar bibliotecas que podem ser incorporadas para melhorar o sistema.
+- Examinar bibliotecas que possam ser integradas para aprimorar o sistema.
 - Avaliar quais endpoints fazem sentido exigir a senha da conta para funcionar.
 - Avaliar a necessidade de criar funções adicionais para aplicar o conceito DRY (Don't Repeat Yourself) e aprimorar a estrutura do código.
 
