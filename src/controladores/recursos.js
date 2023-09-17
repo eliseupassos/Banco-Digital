@@ -44,15 +44,16 @@ const criarConta = (req, res) => {
 const atualizarConta = (req, res) => {
     const numeroDaConta = req.params.numeroConta
     let contaAtualizada = req.body
+    const indice = acharIndiceConta(bancodedados, numeroDaConta);
     contaAtualizada = padronizarConta(contaAtualizada);
     let conta = acharConta(bancodedados, numeroDaConta);
     if (!conta) {
         return res.status(400).json({ 'mensagem': 'Verificar se o numero da conta passado como parametro na URL é válida' })
     };
-    bancodedados.contas.splice(Number(numeroDaConta) - 1, 1);
+    bancodedados.contas.splice(indice, 1);
     const verificar = verificacaoCompletaDaConta(req, res, contaAtualizada, bancodedados)
     if (verificar) {
-        bancodedados.contas.splice(Number(numeroDaConta) - 1, 0, conta);
+        bancodedados.contas.splice(indice, 0, conta);
         return verificar
     }
     conta = {
@@ -62,7 +63,7 @@ const atualizarConta = (req, res) => {
             ...contaAtualizada
         }
     };
-    bancodedados.contas.splice(Number(numeroDaConta) - 1, 0, conta);
+    bancodedados.contas.splice(indice, 0, conta);
     return res.status(200).json();
 };
 const excluirConta = (req, res) => {
@@ -77,7 +78,7 @@ const excluirConta = (req, res) => {
     };
     bancodedados.contas.splice(indice, 1);
     if (Number(numeroDaConta) > organizadorDeNumeros) {
-        organizadorDeNumeros = Number(numeroDaConta)
+        organizadorDeNumeros = Number(numeroDaConta);
     }
     return res.status(200).json();
 };
